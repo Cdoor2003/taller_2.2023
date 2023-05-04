@@ -1,6 +1,8 @@
 package view;
 
-public class VentanaListaCafes {
+import javax.swing.*;
+
+public class VentanaListaCafes extends JFrame {
 	private JPanel panel;
 
 	public void iniciarComponentes() {

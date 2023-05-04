@@ -3,8 +3,15 @@ package model;
 public class Cafe {
 	private int cantidadGramos;
 	private int mililitrosAgua;
-	private String tamaño;
+	private String tamanho;
 	private String ingredientesOpcionales;
+
+	public Cafe(int cantidadGramos, int mililitrosAgua, String tamanho, String ingredientesOpcionales) {
+		this.cantidadGramos = cantidadGramos;
+		this.mililitrosAgua = mililitrosAgua;
+		this.tamanho = tamanho;
+		this.ingredientesOpcionales = ingredientesOpcionales;
+	}
 
 	public int getCantidadGramos() {
 		return this.cantidadGramos;
@@ -22,12 +29,12 @@ public class Cafe {
 		this.mililitrosAgua = mililitrosAgua;
 	}
 
-	public String getTamaño() {
-		return this.tamaño;
+	public String getTamanho() {
+		return this.tamanho;
 	}
 
-	public void setTamaño(String tamaño) {
-		this.tamaño = tamaño;
+	public void setTamanho(String tamanho) {
+		this.tamanho = tamanho;
 	}
 
 	public String getIngredientesOpcionales() {
@@ -36,5 +43,9 @@ public class Cafe {
 
 	public void setIngredientesOpcionales(String ingredientesOpcionales) {
 		this.ingredientesOpcionales = ingredientesOpcionales;
+	}
+
+	public String toString(){
+		return cantidadGramos+","+mililitrosAgua+","+tamanho+","+ingredientesOpcionales;
 	}
 }

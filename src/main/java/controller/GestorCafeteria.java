@@ -8,11 +8,11 @@ public class GestorCafeteria {
 		throw new UnsupportedOperationException();
 	}
 
-	public void descontinuarCafe(Cafe cafe) {
+	public void descontinuarCafe(int cantidadGramos, int mililitros, String tamanho) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void modificarInfomarcionCafeteria() {
+	public void modificarInfomarcionCafeteria(String nombre, String direccion, String IngredientesEspeciales) {
 		throw new UnsupportedOperationException();
 	}
 
