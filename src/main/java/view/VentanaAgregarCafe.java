@@ -12,7 +12,7 @@ public class VentanaAgregarCafe extends JFrame {
 	private JPanel panel;
 
 	public VentanaAgregarCafe(){
-		setTitle("Menu");
+		setTitle("Agregar Café");
 		setBounds(50, 50, 400, 400);
 		setLocationRelativeTo(null);
 		setResizable(false);

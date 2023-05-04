@@ -9,6 +9,12 @@ public class Cafeteria {
 	private String redesSociales;
 	private ArrayList<Cafe> cafes = new ArrayList<Cafe>();
 
+	public Cafeteria(String nombre, String direccion, String redesSociales) {
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.redesSociales = redesSociales;
+	}
+
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -31,5 +37,9 @@ public class Cafeteria {
 
 	public void setRedesSociales(String redesSociales) {
 		this.redesSociales = redesSociales;
+	}
+
+	public String toString(){
+		return nombre+","+direccion+","+redesSociales;
 	}
 }

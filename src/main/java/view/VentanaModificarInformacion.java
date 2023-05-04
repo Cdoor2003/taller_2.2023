@@ -11,7 +11,7 @@ public class VentanaModificarInformacion extends JFrame {
 	private JPanel panel;
 
 	public VentanaModificarInformacion(){
-		setTitle("Menu");
+		setTitle("Modificar Información");
 		setBounds(50, 50, 400, 300);
 		setLocationRelativeTo(null);
 		setResizable(false);
@@ -91,7 +91,7 @@ public class VentanaModificarInformacion extends JFrame {
 				String nombre = cajaTexto1.getText();
 				String direccion = cajaTexto2.getText();
 				String ingredientesEspeciales = cajaTexto3.getText();
-				gestorCafeteria.modificarInfomarcionCafeteria();
+				gestorCafeteria.modificarInfomarcionCafeteria(nombre,direccion,ingredientesEspeciales);
 			}
 		};
 		boton1.addActionListener(eventoClick1);

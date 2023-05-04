@@ -12,7 +12,7 @@ public class VentanaDescontinuarCafe extends JFrame {
 	private JPanel panel;
 
 	public VentanaDescontinuarCafe(){
-		setTitle("Menu");
+		setTitle("Descontinuar Café");
 		setBounds(50, 50, 400, 300);
 		setLocationRelativeTo(null);
 		setResizable(false);
@@ -70,6 +70,9 @@ public class VentanaDescontinuarCafe extends JFrame {
 		JLabel etiqueta4 = crearEtiqueta("Tamaño : ",10,130,200,14,"Calibri");
 		panel.add(etiqueta4);
 
+		JLabel etiqueta5 = crearEtiqueta("Ingredientes opcionales : ",10,170,170,14,"Calibri");
+		panel.add(etiqueta5);
+
 		JTextField cajaTexto1 = crearCajaTexto(170,47,170,20);
 		panel.add(cajaTexto1);
 
@@ -78,6 +81,9 @@ public class VentanaDescontinuarCafe extends JFrame {
 
 		JTextField cajaTexto3 = crearCajaTexto(170,127,170,20);
 		panel.add(cajaTexto3);
+
+		JTextField cajatexto4 = crearCajaTexto(170,167,170,20);
+		panel.add(cajatexto4);
 
 		JButton boton1 = crearBoton("Agregar",40,220,150,18,"Calibri");
 		panel.add(boton1);
@@ -92,7 +98,9 @@ public class VentanaDescontinuarCafe extends JFrame {
 				int cantidadGramos = Integer.parseInt(cajaTexto1.getText());
 				int mililitrosAgua = Integer.parseInt(cajaTexto2.getText());
 				String tamanho = cajaTexto3.getText();
-				gestorCafeteria.descontinuarCafe(cantidadGramos,mililitrosAgua,tamanho);
+				String ingredientesEspeciales = cajatexto4.getText();
+				Cafe cafe = new Cafe(cantidadGramos,mililitrosAgua,tamanho,ingredientesEspeciales);
+				gestorCafeteria.descontinuarCafe(cafe);
 			}
 		};
 		boton1.addActionListener(eventoClick1);
